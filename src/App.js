@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { lynkList } from './lynkList';
+import Header from './Header';
+import Cards from './Cards';
+import { cardsInventory } from './cardsInventory';
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header list={lynkList} brand={'HandCrafty Cards and More!'}/>
+      <h2 id="bday">
+        Cards
+      </h2>
+        <div id='grid'>
+          <Cards cards={cardsInventory}  />
+        </div>
     </div>
   );
 }
